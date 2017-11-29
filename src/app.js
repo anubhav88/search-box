@@ -1,15 +1,15 @@
-import TodoController from './todoController';
-import TodoTemplate from './template';
-import TodoData from './todoData';
-import View from './view';
+import SearchController from './searchController';
+import SearchTemplate from './searchTemplate';
+import SearchResultList from './searchResultList';
+import SearchView from './Searchview';
 /**
  * Page initialization
  */
 function init() {
-    const todoData = new TodoData([]);
-    const template = new TodoTemplate();
-    const view = new View(template);
-    const controller = new TodoController(todoData, view);
+    const searchResultList = new SearchResultList([]);
+    const searchTemplate = new SearchTemplate();
+    const searchView = new SearchView(searchTemplate);
+    const searchController = new SearchController(searchResultList, searchView);
 }
 
 window.onload = function() {
