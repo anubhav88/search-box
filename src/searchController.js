@@ -6,7 +6,7 @@ export default class SearchController{
 		this.searchView.addEventListenerForKeyDown(this.handleKeyDown.bind(this))
 	}
 
-	handleKeyup = ()=>{
+	handleKeyup(){
 		let result = this.searchService.getSearchResult();
 		if(result)
 		{
@@ -14,7 +14,7 @@ export default class SearchController{
 		}
 	};
 
-	handleKeyDown = ()=>{
+	handleKeyDown(){
 		this.searchService.reset();
 		this.searchView.updateView([]);
 	}

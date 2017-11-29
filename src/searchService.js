@@ -3,7 +3,11 @@ export default class SearchService{
 	
 	}
 
-	getSearchResult=()=>{
+	getSearchResult(){
 		// get search result
+	}
+
+	reset(){
+		
 	}
 }
