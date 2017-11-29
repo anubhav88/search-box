@@ -1,15 +1,15 @@
 import SearchController from './searchController';
 import SearchTemplate from './searchTemplate';
-import SearchResultList from './searchResultList';
 import SearchView from './Searchview';
+import SearchService from './SearchService';
 /**
  * Page initialization
  */
 function init() {
-    const searchResultList = new SearchResultList([]);
     const searchTemplate = new SearchTemplate();
+    const searchService = new SearchService();
     const searchView = new SearchView(searchTemplate);
-    const searchController = new SearchController(searchResultList, searchView);
+    const searchController = new SearchController(searchService, searchView);
 }
 
 window.onload = function() {

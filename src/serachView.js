@@ -10,14 +10,14 @@ export default class View {
 	}
 	
 	addEventListenerForKeyDown(callback){
-		document.addEventListener("keydown",callback){
+		document.addEventListener("keydown",function(){
 			callback(textbox);
-		}
+		});
 	}
 
 	addEventListenerForKeyUp(callback){
-		document.addEventListener("keyup",callback){
+		document.addEventListener("keyup",function(){
 			callback(textbox);
-		}
+		});
 	}		
 }

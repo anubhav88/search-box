@@ -1,20 +1,20 @@
 'use strict';
 
-var _todoController = require('./todoController');
+var _searchController = require('./searchController');
 
-var _todoController2 = _interopRequireDefault(_todoController);
+var _searchController2 = _interopRequireDefault(_searchController);
 
-var _template = require('./template');
+var _searchTemplate = require('./searchTemplate');
 
-var _template2 = _interopRequireDefault(_template);
+var _searchTemplate2 = _interopRequireDefault(_searchTemplate);
 
-var _todoData = require('./todoData');
+var _Searchview = require('./Searchview');
 
-var _todoData2 = _interopRequireDefault(_todoData);
+var _Searchview2 = _interopRequireDefault(_Searchview);
 
-var _view = require('./view');
+var _SearchService = require('./SearchService');
 
-var _view2 = _interopRequireDefault(_view);
+var _SearchService2 = _interopRequireDefault(_SearchService);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22,10 +22,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Page initialization
  */
 function init() {
-    var todoData = new _todoData2.default([]);
-    var template = new _template2.default();
-    var view = new _view2.default(template);
-    var controller = new _todoController2.default(todoData, view);
+    var searchTemplate = new _searchTemplate2.default();
+    var searchService = new _SearchService2.default();
+    var searchView = new _Searchview2.default(searchTemplate);
+    var searchController = new _searchController2.default(searchService, searchView);
 }
 
 window.onload = function () {

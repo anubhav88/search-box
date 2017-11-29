@@ -7,11 +7,7 @@ export default class SearchController{
 	}
 
 	handleKeyup(){
-		let result = this.searchService.getSearchResult();
-		if(result)
-		{
-			this.searchView.updateView(result);
-		}
+		this.searchService.getSearchResult(this.searchView.updateView.bind(this.searchView));
 	};
 
 	handleKeyDown(){
