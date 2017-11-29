@@ -3,7 +3,7 @@ export default class SearchService{
 	
 	}
 
-	getSearchResult= function(){
+	getSearchResult=()=>{
 		// get search result
 	}
 }

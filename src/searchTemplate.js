@@ -3,7 +3,7 @@ export default class SearchTemplate {
 
     }
 
-    getTemplate = function(searchResultArr) {
+    getTemplate = (searchResultArr) =>{
         searchResultArr.reduce((o, result) => {
             return o +
                 `<li
