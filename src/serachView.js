@@ -9,7 +9,7 @@ export default class View {
 		this.ul.innerHTML = this.template.getTemplate(searchResultArr);	
 	}
 	
-	addEventListenerForKeyUp(callback){
+	addEventListenerForKeyDown(callback){
 		document.addEventListener("keydown",callback){
 			callback(textbox);
 		}
