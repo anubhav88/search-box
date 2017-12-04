@@ -16,7 +16,7 @@ var SearchTemplate = function () {
     _createClass(SearchTemplate, [{
         key: 'getTemplate',
         value: function getTemplate(searchResultArr) {
-            searchResultArr.reduce(function (o, result) {
+            return searchResultArr.list.reduce(function (o, result) {
                 return o + ('<li\n        \t\t\t class="todo-li"> \n        \t\t\t' + result.text + ' \n        \t\t\t</li>');
             }, '');
         }

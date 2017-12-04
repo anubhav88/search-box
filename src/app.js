@@ -1,6 +1,6 @@
 import SearchController from './searchController';
 import SearchTemplate from './searchTemplate';
-import SearchView from './Searchview';
+import SearchView from './SearchView';
 import SearchService from './SearchService';
 /**
  * Page initialization

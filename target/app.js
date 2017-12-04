@@ -8,9 +8,9 @@ var _searchTemplate = require('./searchTemplate');
 
 var _searchTemplate2 = _interopRequireDefault(_searchTemplate);
 
-var _Searchview = require('./Searchview');
+var _SearchView = require('./SearchView');
 
-var _Searchview2 = _interopRequireDefault(_Searchview);
+var _SearchView2 = _interopRequireDefault(_SearchView);
 
 var _SearchService = require('./SearchService');
 
@@ -24,7 +24,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function init() {
     var searchTemplate = new _searchTemplate2.default();
     var searchService = new _SearchService2.default();
-    var searchView = new _Searchview2.default(searchTemplate);
+    var searchView = new _SearchView2.default(searchTemplate);
     var searchController = new _searchController2.default(searchService, searchView);
 }
 

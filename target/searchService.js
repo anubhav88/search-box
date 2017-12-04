@@ -27,7 +27,8 @@ var SearchService = function () {
 
 	_createClass(SearchService, [{
 		key: 'getSearchResult',
-		value: function getSearchResult(callback) {
+		value: function getSearchResult(value, callback) {
+			console.log(value);
 			var service = this;
 			var promise = new Promise(function (resolve, reject) {
 				service.timer = setTimeout(resolve, 5000);
@@ -45,12 +46,12 @@ var SearchService = function () {
 		key: '_getData',
 		value: function _getData() {
 			var result = [];
-			result.push(new _searchResult2.default['Hi hello1']());
-			result.push(new _searchResult2.default['Hi hello2']());
-			result.push(new _searchResult2.default['Hi hello3']());
-			result.push(new _searchResult2.default['Hi hello4']());
-			result.push(new _searchResult2.default['Hi hello5']());
-			return new _searchResultList2.default(result());
+			result.push(new _searchResult2.default('Hi hello1'));
+			result.push(new _searchResult2.default('Hi hello2'));
+			result.push(new _searchResult2.default('Hi hello3'));
+			result.push(new _searchResult2.default('Hi hello4'));
+			result.push(new _searchResult2.default('Hi hello5'));
+			return new _searchResultList2.default(result);
 		}
 	}]);
 

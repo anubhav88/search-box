@@ -6,7 +6,8 @@ export default class SearchService{
 		this.timer=null;
 	}
 
-	getSearchResult(callback){
+	getSearchResult(value, callback){
+		console.log(value);
 		let service = this;
 		let promise = new Promise(function(resolve, reject) {
 			service.timer = setTimeout(resolve, 5000);
@@ -22,11 +23,7 @@ export default class SearchService{
 
 	_getData(){
 		let result = [];
-		result.push(new SearchResult['Hi hello1']);
-		result.push(new SearchResult['Hi hello2']);
-		result.push(new SearchResult['Hi hello3']);
-		result.push(new SearchResult['Hi hello4']);
-		result.push(new SearchResult['Hi hello5']);
-		return new SearchResultList(result());
+		result.push(new SearchResult('Hi hello1'));
+		return new SearchResultList(result);
 	}
 }

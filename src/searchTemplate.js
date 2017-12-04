@@ -4,7 +4,7 @@ export default class SearchTemplate {
     }
 
     getTemplate(searchResultArr){
-        searchResultArr.reduce((o, result) => {
+        return searchResultArr.list.reduce((o, result) => {
             return o +
                 `<li
         			 class="todo-li"> 

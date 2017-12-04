@@ -2,7 +2,7 @@ export default class View {
 	constructor(templateHtml){
 		this.template = templateHtml;
 		this.ul = document.getElementsByClassName("search-result")[0];
-		this.textbox=document.getElementsByClassName("search-box")[0];
+		this.textbox=document.getElementsByClassName("new-search")[0];
 	}
 
 	updateView(searchResultArr){
@@ -10,14 +10,16 @@ export default class View {
 	}
 	
 	addEventListenerForKeyDown(callback){
-		document.addEventListener("keydown",function(){
-			callback(textbox);
+		var textbox =this.textbox;
+		textbox.addEventListener("keydown",function(){
+			callback(textbox.value);
 		});
 	}
 
 	addEventListenerForKeyUp(callback){
-		document.addEventListener("keyup",function(){
-			callback(textbox);
+		var textbox =this.textbox;
+		textbox.addEventListener("keyup",function(){
+			callback(textbox.value);
 		});
 	}		
 }
